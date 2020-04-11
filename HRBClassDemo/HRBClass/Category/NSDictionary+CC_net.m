@@ -8,7 +8,7 @@
 
 #import "NSDictionary+CC_net.h"
 #import "LCAPI.h"
-#import "Tool.h"
+
 #define CC_SUCCESS [self[@"code"] integerValue] == 200
 
 @implementation NSDictionary (CC_net)

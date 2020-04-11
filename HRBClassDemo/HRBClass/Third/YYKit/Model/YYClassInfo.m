@@ -53,10 +53,10 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
             default: { prefix = false; } break;
         }
     }
-
+    
     len = strlen(type);
     if (len == 0) return YYEncodingTypeUnknown | qualifier;
-
+    
     switch (*type) {
         case 'v': return YYEncodingTypeVoid | qualifier;
         case 'B': return YYEncodingTypeBool | qualifier;
@@ -97,15 +97,37 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
     self = [super init];
     _ivar = ivar;
     const char *name = ivar_getName(ivar);
+    NSString *ocName;
     if (name) {
-        _name = [NSString stringWithUTF8String:name];
+        ocName = [NSString stringWithUTF8String:name];
+        _name = ocName;
     }
+    
     _offset = ivar_getOffset(ivar);
     const char *typeEncoding = ivar_getTypeEncoding(ivar);
     if (typeEncoding) {
         _typeEncoding = [NSString stringWithUTF8String:typeEncoding];
         _type = YYEncodingGetType(typeEncoding);
     }
+    
+    if ([ocName containsString:@"___"]) {
+        NSArray *nameArr = [ocName componentsSeparatedByString:@"___"];
+        //uid___id
+        //order___HomeOrderModel
+        if (nameArr.count == 2 && _typeEncoding) {
+            if ([_typeEncoding containsString:@"Array"]) {
+                _customIsArray = YES;
+                 _customArrName = nameArr[0];
+            }else{
+                _customIsArray = NO;
+            }
+            _customName = nameArr[1];
+           
+        }
+    }
+    
+    
+    
     return self;
 }
 
@@ -132,6 +154,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
         _returnTypeEncoding = [NSString stringWithUTF8String:returnType];
         free(returnType);
     }
+    
     unsigned int argumentCount = method_getNumberOfArguments(method);
     if (argumentCount > 0) {
         NSMutableArray *argumentTypes = [NSMutableArray new];
@@ -255,6 +278,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
 }
 
 - (instancetype)initWithClass:(Class)cls {
+    
     if (!cls) return nil;
     self = [super init];
     _cls = cls;
@@ -265,12 +289,13 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
     }
     _name = NSStringFromClass(cls);
     [self _update];
-
+    
     _superClassInfo = [self.class classInfoWithClass:_superCls];
     return self;
 }
 
 - (void)_update {
+    
     _ivarInfos = nil;
     _methodInfos = nil;
     _propertyInfos = nil;
@@ -303,10 +328,21 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
     Ivar *ivars = class_copyIvarList(cls, &ivarCount);
     if (ivars) {
         NSMutableDictionary *ivarInfos = [NSMutableDictionary new];
+        NSMutableArray *ca = [NSMutableArray new];
+        NSMutableArray *cn = [NSMutableArray new];
         _ivarInfos = ivarInfos;
+        _customArr = ca;
+        _customName = cn;
         for (unsigned int i = 0; i < ivarCount; i++) {
             YYClassIvarInfo *info = [[YYClassIvarInfo alloc] initWithIvar:ivars[i]];
             if (info.name) ivarInfos[info.name] = info;
+            if (info.customName){
+                 _haveCustomIvar = YES;
+                if (info.customIsArray) {
+                    [ca addObject:info];
+                }
+                [cn addObject:info];
+            }
         }
         free(ivars);
     }
@@ -327,6 +363,7 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding) {
 }
 
 + (instancetype)classInfoWithClass:(Class)cls {
+    
     if (!cls) return nil;
     static CFMutableDictionaryRef classCache;
     static CFMutableDictionaryRef metaCache;

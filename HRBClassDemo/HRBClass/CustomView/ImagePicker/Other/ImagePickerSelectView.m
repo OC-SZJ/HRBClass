@@ -7,7 +7,7 @@
 //
 
 #import "ImagePickerSelectView.h"
-#import "Tool.h"
+
 @implementation ImagePickerSelectView
 {
     UIImageView *_imageView;

@@ -26,10 +26,6 @@
  自定义视图文件
  */
 #import "LCCustomView.h"
-/*
-  其他功能文件
- */
-#import "Tool.h"
 
 /*
   界面适配文件

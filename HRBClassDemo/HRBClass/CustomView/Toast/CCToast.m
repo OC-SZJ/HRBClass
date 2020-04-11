@@ -7,7 +7,7 @@
 //
 
 #import "CCToast.h"
-#import "Tool.h"
+
 
 static CCToast *_toast = nil;
 

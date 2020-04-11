@@ -7,7 +7,7 @@
 //
 
 #import "UIImage+Gradient.h"
-#import "Tool.h"
+
 @implementation UIImage (Gradient)
 
 + (UIImage *)normalImageWithSize:(CGSize)size{

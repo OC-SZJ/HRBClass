@@ -8,7 +8,7 @@
 
 #import "AdapterForXIB.h"
 #import <objc/runtime.h>
-#import "Tool.h"
+
 IB_DESIGNABLE
 
 

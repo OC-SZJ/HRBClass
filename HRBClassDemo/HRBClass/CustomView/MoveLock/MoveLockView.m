@@ -7,7 +7,7 @@
 //
 
 #import "MoveLockView.h"
-#import "Tool.h"
+
 CGFloat DistanceBetweenPoints (CGPoint first, CGPoint second) {
     CGFloat deltaX = second.x - first.x;
     CGFloat deltaY = second.y - first.y;

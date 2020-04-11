@@ -10,7 +10,7 @@
 #import "IQKeyboardManager.h"
 #import "SVProgressHUD.h"
 #import "CC_BUG.h"
-#import "Tool.h"
+
 
 
 BaseViewController * _currentVC;

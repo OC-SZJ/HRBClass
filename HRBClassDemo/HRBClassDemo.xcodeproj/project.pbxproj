@@ -250,6 +250,8 @@
 		15D7292424417B2B00ABDA82 /* HRBDateSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D7292224417B2B00ABDA82 /* HRBDateSelectView.m */; };
 		15D7292924417BA800ABDA82 /* PickerSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D7292624417BA800ABDA82 /* PickerSelectView.xib */; };
 		15D7292A24417BA800ABDA82 /* PickerSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D7292824417BA800ABDA82 /* PickerSelectView.m */; };
+		15D7292F2441AF0000ABDA82 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D7292D2441AF0000ABDA82 /* TestViewController.m */; };
+		15D729302441AF0000ABDA82 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D7292E2441AF0000ABDA82 /* TestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -732,6 +734,9 @@
 		15D7292624417BA800ABDA82 /* PickerSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerSelectView.xib; sourceTree = "<group>"; };
 		15D7292724417BA800ABDA82 /* PickerSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerSelectView.h; sourceTree = "<group>"; };
 		15D7292824417BA800ABDA82 /* PickerSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerSelectView.m; sourceTree = "<group>"; };
+		15D7292C2441AF0000ABDA82 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		15D7292D2441AF0000ABDA82 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		15D7292E2441AF0000ABDA82 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -771,6 +776,9 @@
 				156AE8A8243ACFFB00247FCD /* LaunchScreen.storyboard */,
 				156AE8AB243ACFFB00247FCD /* Info.plist */,
 				156AE8AC243ACFFB00247FCD /* main.m */,
+				15D7292C2441AF0000ABDA82 /* TestViewController.h */,
+				15D7292D2441AF0000ABDA82 /* TestViewController.m */,
+				15D7292E2441AF0000ABDA82 /* TestViewController.xib */,
 			);
 			path = HRBClassDemo;
 			sourceTree = "<group>";
@@ -930,10 +938,10 @@
 		156AE904243AD26600247FCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				156AE905243AD26600247FCD /* YYClassInfo.h */,
-				156AE906243AD26600247FCD /* NSObject+YYModel.m */,
-				156AE907243AD26600247FCD /* YYClassInfo.m */,
 				156AE908243AD26600247FCD /* NSObject+YYModel.h */,
+				156AE906243AD26600247FCD /* NSObject+YYModel.m */,
+				156AE905243AD26600247FCD /* YYClassInfo.h */,
+				156AE907243AD26600247FCD /* YYClassInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1821,6 +1829,7 @@
 				156AE8AA243ACFFB00247FCD /* LaunchScreen.storyboard in Resources */,
 				156AEBAC243AD26600247FCD /* LOGView.xib in Resources */,
 				156AEBA9243AD26600247FCD /* TableViewNullView.xib in Resources */,
+				15D729302441AF0000ABDA82 /* TestViewController.xib in Resources */,
 				156AEBC0243AD26600247FCD /* Img_back@2x.png in Resources */,
 				156AEBBF243AD26600247FCD /* a_play@2x.png in Resources */,
 				156AEBBE243AD26600247FCD /* VideoDetailVC.xib in Resources */,
@@ -2043,6 +2052,7 @@
 				156AEB22243AD26600247FCD /* UIGestureRecognizer+YYAdd.m in Sources */,
 				156AEBB9243AD26600247FCD /* ImagePickerSelectView.m in Sources */,
 				156AEB97243AD26600247FCD /* BaseCollectionVC+Tool.m in Sources */,
+				15D7292F2441AF0000ABDA82 /* TestViewController.m in Sources */,
 				156AEAFA243AD26600247FCD /* YYFrameImage.m in Sources */,
 				156AEB90243AD26600247FCD /* BaseTableVC+Tool.m in Sources */,
 				156AEB9B243AD26600247FCD /* BaseViewController.m in Sources */,

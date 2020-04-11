@@ -85,6 +85,9 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
 @property (nonatomic, assign, readonly) ptrdiff_t offset;       ///< Ivar's offset
 @property (nonatomic, strong, readonly) NSString *typeEncoding; ///< Ivar's type encoding
 @property (nonatomic, assign, readonly) YYEncodingType type;    ///< Ivar's type
+@property (nonatomic, assign, readonly) NSString * customName; /// 新的名称
+@property (nonatomic, assign, readonly) NSString * customArrName; /// 新的名称
+@property (nonatomic, readonly) BOOL  customIsArray;/// 自定义属性是不是数组  YES 数组  NO 字符串
 
 /**
  Creates and returns an ivar info object.
@@ -150,12 +153,17 @@ YYEncodingType YYEncodingGetType(const char *typeEncoding);
 @property (nullable, nonatomic, assign, readonly) Class superCls; ///< super class object
 @property (nullable, nonatomic, assign, readonly) Class metaCls;  ///< class's meta class object
 @property (nonatomic, readonly) BOOL isMeta; ///< whether this class is meta class
+
 @property (nonatomic, strong, readonly) NSString *name; ///< class name
 @property (nullable, nonatomic, strong, readonly) YYClassInfo *superClassInfo; ///< super class's class info
 @property (nullable, nonatomic, strong, readonly) NSDictionary<NSString *, YYClassIvarInfo *> *ivarInfos; ///< ivars
 @property (nullable, nonatomic, strong, readonly) NSDictionary<NSString *, YYClassMethodInfo *> *methodInfos; ///< methods
 @property (nullable, nonatomic, strong, readonly) NSDictionary<NSString *, YYClassPropertyInfo *> *propertyInfos; ///< properties
 
+@property (nonatomic, readonly) BOOL haveCustomIvar; /// 是否拥有自定义属性
+
+@property (nonatomic, strong, readonly) NSArray <YYClassIvarInfo *>* customArr;
+@property (nonatomic, strong, readonly) NSArray <YYClassIvarInfo *>* customName;
 /**
  If the class is changed (for example: you add a method to this class with
  'class_addMethod()'), you should call this method to refresh the class info cache.

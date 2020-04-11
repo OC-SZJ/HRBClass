@@ -12,7 +12,7 @@
 
 #import "ATPhotoBrowserVC.h"
 #import "VideoDetailVC.h"
-#import "Tool.h"
+
 
 @interface ImagePickerVC ()<UICollectionViewDelegate,UICollectionViewDataSource>
 

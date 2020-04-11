@@ -32,9 +32,6 @@
  */
 - (NSArray <BaseModel *>*)modelArr;
 
-+ (NSDictionary *)cc_customProPerty;
-
-+ (NSDictionary *)cc_arrayWithClass;
 
 @end
 

@@ -10,7 +10,7 @@
 
 #import "UITableView+Tool.h"
 #import <objc/runtime.h>
-#import "Tool.h"
+
 #import "BaseTableVC+Tool.h"
 #import "BaseModel.h"
 #import "LCNetWorkTool.h"

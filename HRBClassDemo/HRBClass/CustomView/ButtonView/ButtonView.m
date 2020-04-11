@@ -7,7 +7,7 @@
 //
 
 #import "ButtonView.h"
-#import "Tool.h"
+
 @implementation ButtonView
 {
     NSArray <NSString *> *_strArr;

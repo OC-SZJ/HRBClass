@@ -7,7 +7,7 @@
 //
 
 #import "CCSelectView.h"
-#import "Tool.h"
+
 
 static const float WK = 15.f;
 static const float lineHeight = 2.f;

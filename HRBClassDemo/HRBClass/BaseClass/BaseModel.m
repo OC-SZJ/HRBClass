@@ -2,25 +2,13 @@
 
 #import "BaseModel.h"
 #import "LCNetWorkTool.h"
-#import "Tool.h"
+
 
 
 @implementation BaseModel
 
 codera
 
-+ (NSDictionary *)modelCustomPropertyMapper {
-    if ([self respondsToSelector:@selector(cc_customProPerty)]) {
-        return [self cc_customProPerty];
-    }
-    return @{};
-}
-+ (NSDictionary *)modelContainerPropertyGenericClass {
-    if ([self respondsToSelector:@selector(cc_arrayWithClass)]) {
-        return [self cc_arrayWithClass];
-    }
-    return @{};
-}
 
 -(NSArray<BaseModel *> *)modelArr{return nil;}
 
