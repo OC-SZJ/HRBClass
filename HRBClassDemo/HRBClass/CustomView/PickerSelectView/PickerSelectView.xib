@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PickerSelectView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8k-J1-Sa5">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <connections>
+                        <action selector="remove:" destination="iN0-l3-epB" eventType="touchUpInside" id="L9T-6O-jOv"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Arj-qF-buY">
+                    <rect key="frame" x="0.0" y="646" width="414" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpJ-sT-HKM">
+                            <rect key="frame" x="191.5" y="10" width="31" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" name="黑色"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raV-sc-KAw">
+                            <rect key="frame" x="334" y="5" width="80" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="RlR-1r-CX1"/>
+                                <constraint firstAttribute="width" constant="80" id="ktq-R5-bDY"/>
+                            </constraints>
+                            <state key="normal" title="确定"/>
+                            <connections>
+                                <action selector="sure:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kgz-o9-0Dc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjm-Y4-kls">
+                            <rect key="frame" x="0.0" y="5" width="80" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="8rB-xN-y1d"/>
+                                <constraint firstAttribute="width" constant="80" id="RFb-bK-aN6"/>
+                            </constraints>
+                            <state key="normal" title="取消"/>
+                            <connections>
+                                <action selector="remove:" destination="iN0-l3-epB" eventType="touchUpInside" id="kXY-r4-hSp"/>
+                            </connections>
+                        </button>
+                        <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="uoO-gF-WFj">
+                            <rect key="frame" x="10" y="43" width="394" height="173"/>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="SpJ-sT-HKM" firstAttribute="top" secondItem="Arj-qF-buY" secondAttribute="top" constant="10" id="2sf-j4-sWy"/>
+                        <constraint firstItem="SpJ-sT-HKM" firstAttribute="centerX" secondItem="Arj-qF-buY" secondAttribute="centerX" id="36Q-q5-VJ6"/>
+                        <constraint firstItem="raV-sc-KAw" firstAttribute="top" secondItem="Arj-qF-buY" secondAttribute="top" constant="5" id="9au-hD-eeQ"/>
+                        <constraint firstItem="uoO-gF-WFj" firstAttribute="top" secondItem="SpJ-sT-HKM" secondAttribute="bottom" constant="15" id="JCW-WM-A2z"/>
+                        <constraint firstItem="uoO-gF-WFj" firstAttribute="leading" secondItem="Arj-qF-buY" secondAttribute="leading" constant="10" id="V8C-ba-rLo"/>
+                        <constraint firstItem="wjm-Y4-kls" firstAttribute="top" secondItem="Arj-qF-buY" secondAttribute="top" constant="5" id="Ybo-If-3kD"/>
+                        <constraint firstAttribute="trailing" secondItem="raV-sc-KAw" secondAttribute="trailing" id="Z2P-4c-4Xk"/>
+                        <constraint firstAttribute="trailing" secondItem="uoO-gF-WFj" secondAttribute="trailing" constant="10" id="fDv-eI-6Po"/>
+                        <constraint firstItem="wjm-Y4-kls" firstAttribute="leading" secondItem="Arj-qF-buY" secondAttribute="leading" id="sHp-PN-rbS"/>
+                        <constraint firstAttribute="height" constant="250" id="yKz-Yq-O9l"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="黑色半透明"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Arj-qF-buY" secondAttribute="trailing" id="4fP-YY-bRE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uoO-gF-WFj" secondAttribute="bottom" id="4vk-vE-dYw"/>
+                <constraint firstAttribute="bottom" secondItem="Arj-qF-buY" secondAttribute="bottom" id="HvF-a9-7YJ"/>
+                <constraint firstItem="D8k-J1-Sa5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OhP-R0-aUa"/>
+                <constraint firstItem="Arj-qF-buY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="b43-NO-eEl"/>
+                <constraint firstItem="D8k-J1-Sa5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="jF7-Jw-BQe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="D8k-J1-Sa5" secondAttribute="trailing" id="qbP-Gn-tuu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="D8k-J1-Sa5" secondAttribute="bottom" id="rKX-ek-p0R"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="pickerView" destination="uoO-gF-WFj" id="x1y-Fj-E4q"/>
+                <outlet property="title_label" destination="SpJ-sT-HKM" id="0mF-Ut-t0M"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="112"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="黑色">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="黑色半透明">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

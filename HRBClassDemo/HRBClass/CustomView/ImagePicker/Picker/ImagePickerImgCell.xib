@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImagePickerImgCell">
+            <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uTm-35-LF4">
+                        <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHj-Pd-H49" customClass="ImagePickerSelectView">
+                        <rect key="frame" x="39" y="5" width="18" height="18"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="Bmr-Sv-uaV"/>
+                            <constraint firstAttribute="height" constant="18" id="TTN-Kw-gpI"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HF-Er-3sR">
+                        <rect key="frame" x="34.5" y="0.5" width="27" height="27"/>
+                        <connections>
+                            <action selector="selectAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="BCl-aS-g8V"/>
+                        </connections>
+                    </button>
+                    <view hidden="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Wf-BM-e0W">
+                        <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="BHj-Pd-H49" firstAttribute="top" secondItem="uTm-35-LF4" secondAttribute="top" constant="5" id="50K-aZ-UIz"/>
+                <constraint firstItem="uTm-35-LF4" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="8p2-td-p9v"/>
+                <constraint firstItem="7Wf-BM-e0W" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="9Gc-nH-BnN"/>
+                <constraint firstItem="uTm-35-LF4" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="9TK-EI-jhN"/>
+                <constraint firstItem="BHj-Pd-H49" firstAttribute="trailing" secondItem="uTm-35-LF4" secondAttribute="trailing" constant="-5" id="CHv-jJ-IM2"/>
+                <constraint firstItem="7Wf-BM-e0W" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="GWS-rC-EWZ"/>
+                <constraint firstItem="7Wf-BM-e0W" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="IC0-Gr-Hk2"/>
+                <constraint firstItem="6HF-Er-3sR" firstAttribute="centerY" secondItem="BHj-Pd-H49" secondAttribute="centerY" id="cDS-Gt-iFG"/>
+                <constraint firstItem="uTm-35-LF4" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="dyj-SJ-eTq"/>
+                <constraint firstItem="6HF-Er-3sR" firstAttribute="height" secondItem="BHj-Pd-H49" secondAttribute="height" multiplier="1.5" id="jjM-uP-tW8"/>
+                <constraint firstItem="uTm-35-LF4" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="myK-ob-5bA"/>
+                <constraint firstItem="6HF-Er-3sR" firstAttribute="width" secondItem="BHj-Pd-H49" secondAttribute="width" multiplier="1.5" id="ov0-YM-cBS"/>
+                <constraint firstItem="7Wf-BM-e0W" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="pLw-ZT-2Dk"/>
+                <constraint firstItem="6HF-Er-3sR" firstAttribute="centerX" secondItem="BHj-Pd-H49" secondAttribute="centerX" id="tuV-he-Rpq"/>
+            </constraints>
+            <size key="customSize" width="136" height="53"/>
+            <connections>
+                <outlet property="_mark" destination="7Wf-BM-e0W" id="fqd-VJ-TtR"/>
+                <outlet property="_selectView" destination="BHj-Pd-H49" id="vQF-A7-ePb"/>
+                <outlet property="aImage" destination="uTm-35-LF4" id="amd-MP-0JJ"/>
+            </connections>
+            <point key="canvasLocation" x="-194" y="-47"/>
+        </collectionViewCell>
+    </objects>
+</document>

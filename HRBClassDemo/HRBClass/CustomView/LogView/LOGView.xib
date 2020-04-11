@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LOGView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请截图,截图之后点击屏幕即可" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQR-fK-XsE">
+                    <rect key="frame" x="78.5" y="64" width="257" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CO-1k-ROA">
+                    <rect key="frame" x="10" y="137" width="394" height="0.0"/>
+                    <color key="tintColor" name="hei"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0z-Qa-Sxz">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <connections>
+                        <action selector="remove:" destination="iN0-l3-epB" eventType="touchUpInside" id="kOh-fu-yRc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40285209760273971" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9CO-1k-ROA" firstAttribute="centerX" secondItem="XQR-fK-XsE" secondAttribute="centerX" id="5F2-hg-jwl"/>
+                <constraint firstItem="XQR-fK-XsE" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="5dS-KN-U0X"/>
+                <constraint firstItem="O0z-Qa-Sxz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9pJ-gq-f9J"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="O0z-Qa-Sxz" secondAttribute="trailing" id="Cza-nm-QUX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="O0z-Qa-Sxz" secondAttribute="bottom" id="chh-Vn-NA5"/>
+                <constraint firstItem="9CO-1k-ROA" firstAttribute="top" secondItem="XQR-fK-XsE" secondAttribute="bottom" constant="50" id="snf-ue-rIY"/>
+                <constraint firstItem="O0z-Qa-Sxz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="tNe-I6-Z6Q"/>
+                <constraint firstItem="9CO-1k-ROA" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-20" id="yyt-co-suu"/>
+                <constraint firstItem="XQR-fK-XsE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="z1a-DF-roT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="_notice_label" destination="9CO-1k-ROA" id="66Y-9B-Rdj"/>
+            </connections>
+            <point key="canvasLocation" x="-75" y="113"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="hei">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

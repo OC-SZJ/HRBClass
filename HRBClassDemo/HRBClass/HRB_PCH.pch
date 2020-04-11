@@ -1,0 +1,75 @@
+//
+//  HRB_PCH.pch
+//  HRBClassDemo
+//
+//  Created by SZJ on 2020/4/6.
+//  Copyright © 2020 SZJ. All rights reserved.
+//
+
+#ifndef HRB_PCH_pch
+#define HRB_PCH_pch
+
+
+/*
+  分类头文件
+ */
+#import "LCCategory.h"
+/*
+ 接口文件
+ */
+#import "LCAPI.h"
+/*
+ 父类文件
+ */
+#import "LCBaseClass.h"
+/*
+ 自定义视图文件
+ */
+#import "LCCustomView.h"
+/*
+  其他功能文件
+ */
+#import "Tool.h"
+
+/*
+  界面适配文件
+ */
+#import "AdapterForXIB.h"
+
+
+/*
+ 界面适配文件 (非autoLayout)
+ */
+#import "AdapterForNoAutoLayout.h"
+
+
+/*
+ 宏文件h
+ */
+
+#import "LCMacro.h"
+
+
+/*
+  YYKit
+ */
+#import "YYKit.h"
+
+/*
+  全局定时器
+ */
+#import "TimeManager.h"
+/*
+  登录管理器
+ */
+#import "LoginManager.h"
+///*
+//  定位管理器
+// */
+//#import "LocationManager.h"
+///*
+//  数据选择
+// */
+//#import "PickerSelectView.h"
+
+#endif /* HRB_PCH_pch */
